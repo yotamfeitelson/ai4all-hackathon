@@ -10,9 +10,36 @@ AI4ALL is a project designed to empower non-technical users with AI tools throug
 ### 1. Installer
 - A cross-platform installer for Windows and Mac.
 - Features:
-  - User-friendly UI.
-  - Installs dependencies, LLMs, clients, and MCPs.
+  - User-friendly UI. - Done ✅
+  - Installs dependencies, LLMs, clients, and MCPs. - Partially done, WIP for LLM, client, MCPs 👷🏼‍♀️
   - Advanced options for API key integration.
+TODO:
+- installer.nsi: 
+        A standalone installer script for Windows has been created using NSIS. Here's what has been added:
+
+        1. __installer.nsi__: An NSIS script to generate a Windows installer (`AI4ALL_Installer.exe`). The installer:
+
+        - Installs the necessary files (`installer_script.sh`, `installer_ui.html`, `backend_server.py`) to the target directory.
+        - Creates registry entries for easy uninstallation.
+        - Includes an uninstallation section to clean up installed files and registry keys.
+
+        ### How to Use:
+
+        1. __Install NSIS__:
+
+        - Download and install NSIS from [nsis.sourceforge.io](https://nsis.sourceforge.io/).
+
+        2. __Generate the Installer__:
+
+        - Open the NSIS application.
+        - Load the `installer.nsi` script.
+        - Compile the script to generate `AI4ALL_Installer.exe`.
+
+        3. __Run the Installer__:
+
+        - Double-click the generated `AI4ALL_Installer.exe` to install the application.
+        - Follow the on-screen instructions to complete the installation.
+
 
 ### 2. LLM Integration
 - Detect system specs and install the appropriate LLM (e.g., BitNet, llama.cpp, ollama, etc.).

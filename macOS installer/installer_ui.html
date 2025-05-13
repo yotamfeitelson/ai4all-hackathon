@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI4ALL Installer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to AI4ALL Installer</h1>
+    <button class="button" onclick="runCommand('install_python')">Install Python</button>
+    <button class="button" onclick="runCommand('install_node')">Install Node.js</button>
+    <button class="button" onclick="runCommand('install_llm')">Install LLM</button>
+    <button class="button" onclick="runCommand('install_client')">Install Client</button>
+    <button class="button" onclick="runCommand('install_mcps')">Install MCPs</button>
+    <script>
+        function runCommand(command) {
+            fetch(`/run-command?cmd=${command}`)
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => alert("Error: " + error));
+        }
+    </script>
+</body>
+</html>

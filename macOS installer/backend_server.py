@@ -14,6 +14,7 @@ def run_command():
         command_map = {
             "install_python": "bash installer_script.sh install_python",
             "install_node": "bash installer_script.sh install_node",
+            "install_git": "bash installer_script.sh install_git",
             "install_llm": "bash installer_script.sh install_llm",
             "install_client": "bash installer_script.sh install_client",
             "install_mcps": "bash installer_script.sh install_mcps"

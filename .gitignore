@@ -1,0 +1,23 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore installer logs
+installer_logs/

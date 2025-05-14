@@ -45,7 +45,7 @@ fi
 if ! command -v ollama &> /dev/null; then
     echo "[INFO] Ollama not found. Installing..."
     if [[ "$OSTYPE" == "darwin"* ]]; then
-        /opt/homebrew/bin/brew install ollama
+        brew install ollama
     elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
         echo "[INFO] Linux detected. Please follow manual installation steps for Ollama at https://ollama.com."
         exit 1
